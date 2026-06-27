@@ -1,3 +1,4 @@
+// src\components\Skills.tsx
 const categories = [
   {
     title: "💻 Languages",

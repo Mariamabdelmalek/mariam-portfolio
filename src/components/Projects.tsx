@@ -7,6 +7,7 @@ const projects = [
     description:
       "A full-stack vehicle inventory management system with VIN lookup, image uploads, CRUD operations, and secure cloud database integration.",
     github: "https://github.com/Mariamabdelmalek/dealerlift-crm",
+    image: "/images/projects/dealerlift1.png"
   },
   {
     title: "Social Media Privacy Tool",
@@ -51,18 +52,17 @@ export default function Projects() {
               key={project.title}
               className="flex flex-col rounded-3xl border border-white/10 bg-slate-950 p-6 transition hover:-translate-y-1 hover:border-emerald-400/60"
             >
-              <div className="relative mb-5 h-56 overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-500/20 to-blue-500/20">
-            {project.image && (
-                <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover -all duration-500 hover:scale-110"
-                />
-            )}
-            </div>
-
-              <h3 className="text-2xl font-bold">{project.title}</h3>
+              <div className="relative mb-6 h-56 overflow-hidden rounded-2xl border border-white/10 bg-slate-100">
+  {project.image && (
+    <Image
+      src={project.image}
+      alt={project.title}
+      fill
+      className="object-contain p-2 transition duration-500 hover:scale-105"
+    />
+  )}
+</div>
+                            <h3 className="text-2xl font-bold">{project.title}</h3>
               <p className="mt-3 text-sm font-medium text-emerald-400">
                 {project.tech}
               </p>
